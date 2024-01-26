@@ -6,19 +6,59 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 400px 50%;
+    width: 400px;
     height: 400px;
     border: solid black 5px;
 
 }
 
 
+hr {
+    border: none;
+    height: 5px;
+    background-color: #333; 
+  }
+
 
 p{
-    text-align: center;
+    text-align: left;
 
 }
+
+p.nav{
+    text-align: center;
+}
+
+p.customize{
+    text-align: center;
+}
+
+p.selector{
+    text-align: center;
+}
+
 
 h3{
     text-align: center;
 }
+
+div{
+    margin: auto;
+    width: 410px;
+    text-align: center;
+}
+
+div.selector{
+    text-align: center;
+}
+div:hover{
+    background-color: yellow
+}
+
+#button {
+    background-color: yellow;
+    border: 2px black;
+    margin: auto;
+    width: 20px
+}
+

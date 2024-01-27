@@ -53,6 +53,7 @@ b{
 p.customize{
     text-align: center;
     white-space: nowrap;
+    font-size: 16px;
 }
 
 p.selector{
@@ -97,6 +98,7 @@ div.roll:hover{
 p.addtocart{
     text-align: center;
     font-weight: bold;
+    font-size: 16px;
 }
 
 
@@ -106,22 +108,16 @@ p.checkout{
 }
 
 
-
-span{
-    border: 1px solid black;
-    background-color: yellow;
-    text-align: center;
-}
-
-
 button{
     background-color: yellow;
-    border:#333;
-    padding: 15px 32px;
+    border: 1px solid black;
+    padding: 7px 10px;
+    margin: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: bold;
 
 }
 
@@ -134,3 +130,6 @@ a{
     text-decoration: underline;
 }
 
+.price p{
+    text-decoration: none;
+}

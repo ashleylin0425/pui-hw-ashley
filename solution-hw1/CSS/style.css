@@ -43,18 +43,14 @@ p.nav{
 }
 
 
-/* p.nav:link{
+/* p.nav:visited{
     text-decoration: none;
-}
-
-p.nav:visited{
-    text-decoration:none
-} */
+}  */
 
 b{
     font-weight: bold;
     background-color: yellow;
-}
+} 
 
 p.customize{
     text-align: center;
@@ -94,6 +90,7 @@ div{
 div.selector{
     text-align: center;
 }
+
 div.roll:hover{
     background-color: yellow
 }
@@ -119,8 +116,8 @@ span{
 }
 
 
-.button{
-    color: yellow;
+button{
+    background-color: yellow;
     border:#333;
     padding: 15px 32px;
     text-align: center;
@@ -128,4 +125,13 @@ span{
     display: inline-block;
     font-size: 16px;
 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.roll p{
+    text-decoration: underline;
 }

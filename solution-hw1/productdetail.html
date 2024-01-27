@@ -6,15 +6,17 @@
     <a href="./index.html">
       <img src="/assets/logo/logo-01.svg" width = 400px>
     </a>
-    <hr>
+    <hr class="top">
   </head>
 
   <body>
 
     <nav>
       <p class="nav">
-        <a href="./index.html"><mark><span class="bolded">PRODUCT</span></mark></a>
-      <!--can I do the span thing here?-->
+        <b>
+            <a href="./index.html">PRODUCTS</a>
+        </b>
+        <br>
         <br>
         <a href="shoppingcart.html">CART</a>
       </p>
@@ -24,6 +26,7 @@
 
     <main>
         <h3 id="title">Original cinnamon roll</h3>
+        <br>
   
         <section>
           <div>
@@ -31,11 +34,7 @@
               <img class="roll-image" src="/assets/products/original-cinnamon-roll.jpg" width = 400px>
             </p>
             <p class = "customize">
-                Customize our delicious,
-                <br>
-                hand-made cinammon roll to
-                <br>
-                your liking!
+                Customize our delicious, hand-made cinammon roll to your liking!
             </p>
             <!--how to left align this-->
           </div>
@@ -46,6 +45,7 @@
                 <p class="selector">
                     <label for="glazing">Glazing:</label>
                     <br>
+                    <br>
                     <select name="glazing" id="glazing">
                         <option value="original"> Keep Original </option>
                         <option value="sugar"> Sugar milk</option>
@@ -55,6 +55,7 @@
                     <br>
                     <br>
                     <label for="packsize">Pack size:</label>
+                    <br>
                     <br>
                     <select name="packsize" id="packsize">
                         <option value="1"> 1 </option>
@@ -67,9 +68,14 @@
         </section>
 
         <section>
-            <button>
-                Add to Cart
-            </button>
+            <div class="addtocart">
+                <p class="addtocart">
+                    $2.49
+                    <span>
+                        Add to Cart</span>   
+                </p>
+                
+            </div>
         </section>
 </body>
 

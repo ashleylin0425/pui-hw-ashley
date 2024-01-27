@@ -1,6 +1,4 @@
-.bolded{
-    font-weight: bold;
-}
+
 
 .roll-image{
     display: block;
@@ -12,13 +10,28 @@
 
 }
 
+.cart-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border: solid black 5px;
 
-hr {
+}
+
+hr.top {
     border: none;
-    height: 5px;
+    height: 3px;
     background-color: #333; 
   }
 
+hr.bottom{
+    border: none;
+    height: 5px;
+    background-color: #333; 
+    width: 1000px
+}
 
 p{
     text-align: left;
@@ -27,19 +40,42 @@ p{
 
 p.nav{
     text-align: center;
+    text-decoration: none;
+}
+
+b{
+    font-weight: bold;
+    background-color: yellow;
+    text-decoration: none;
 }
 
 p.customize{
     text-align: center;
+    white-space: nowrap;
 }
 
 p.selector{
     text-align: center;
 }
 
+p.remove{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p.description{
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.5;
+}
+
 
 h3{
     text-align: center;
+    font-size: 25px;
+    font-weight: normal
 }
 
 div{
@@ -51,14 +87,27 @@ div{
 div.selector{
     text-align: center;
 }
-div:hover{
+div.roll:hover{
     background-color: yellow
 }
 
-#button {
-    background-color: yellow;
-    border: 2px black;
-    margin: auto;
-    width: 20px
+
+p.addtocart{
+    text-align: center;
+    font-weight: bold;
 }
 
+
+p.checkout{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+span{
+    border: 1px solid black;
+    background-color: yellow;
+    text-align: center;
+    width: 50px;
+}

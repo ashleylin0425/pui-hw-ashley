@@ -1,0 +1,22 @@
+.gallery-item:hover {
+	background-color: yellow;
+}
+
+.gallery-item {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+}
+
+.gallery-item img {
+	width:  285px;
+	margin: auto;
+}
+
+.gallery-item .name {
+	text-decoration: underline;
+}
+
+p.name:hover {
+	font-weight: bold;
+}

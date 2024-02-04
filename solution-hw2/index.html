@@ -1,135 +1,57 @@
-.roll-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 400px;
-    border: solid black 5px;
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/gallery.css" type="text/css" />
+	<title>Product Gallery</title>
+	
+</head>
+<body>
+	<div class="header">
+		<a href="#" id="logo"><img src="images/logo/logo-01.svg"></a>
+		<div class="headeright">
+			<div class="navbar">
+				<a id="product" href="#"><span class="highlight">Products</span></a>
+				<a id="cart" href="cart.html">Cart<span class="superscript"></span></a>
+			</div>
+			<hr>
+			<p class="title"> Our hand-made cinnamon rolls</p>			
+		</div>
+	</div>
 
-}
-
-.cart-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 200px;
-    border: solid black 5px;
-
-}
-
-hr.top {
-    border: none;
-    height: 3px;
-    background-color: #333; 
-  }
-
-hr.bottom{
-    border: none;
-    height: 5px;
-    background-color: #333; 
-    width: 1000px
-}
-
-p{
-    text-align: left;
-
-}
-
-p.nav{
-    text-align: center;
-}
-
-
-/* p.nav:visited{
-    text-decoration: none;
-}  */
-
-b{
-    font-weight: bold;
-    background-color: yellow;
-} 
-
-p.customize{
-    text-align: center;
-    white-space: nowrap;
-}
-
-p.selector{
-    text-align: center;
-}
-
-p.remove{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-p.description{
-    text-align: center;
-    font-size: 18px;
-    line-height: 2.5;
-}
-
-
-h3{
-    text-align: center;
-    font-size: 25px;
-    font-weight: normal
-}
-
-div{
-    margin: auto;
-    width: 410px;
-    text-align: center;
-}
-
-div.selector{
-    text-align: center;
-}
-
-div.roll:hover{
-    background-color: yellow
-}
-
-
-p.addtocart{
-    text-align: center;
-    font-weight: bold;
-}
-
-
-p.checkout{
-    text-align: center;
-    font-weight: bold;
-}
-
-
-
-span{
-    border: 1px solid black;
-    background-color: yellow;
-    text-align: center;
-}
-
-
-button{
-    background-color: yellow;
-    border:#333;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.roll p{
-    text-decoration: underline;
-}
+	<div class="container">
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/original-cinnamon-roll.jpg">
+			<p class="name">Original cinnamon roll</p>
+			<p class="price">$2.49</p>
+		</a>
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/apple-cinnamon-roll.jpg">
+			<p class="name">Apple cinnamon roll</p>
+			<p class="price">$3.49</p>
+		</a>
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/raisin-cinnamon-roll.jpg">
+			<p class="name">Raisin cinnamon roll</p>
+			<p class="price">$2.99</p>
+		</a>
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/walnut-cinnamon-roll.jpg">
+			<p class="name">Walnut cinnamon roll</p>
+			<p class="price">$3.49</p>
+		</a>
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/double-chocolate-cinnamon-roll.jpg">
+			<p class="name">Double-chocolate cinnamon roll</p>
+			<p class="price">$3.99</p>
+		</a>
+		<a class="gallery-item" href="product.html">
+			<img class="product-image" src="images/products/strawberry-cinnamon-roll.jpg">
+			<p class="name">Strawberry cinnamon roll</p>
+			<p class="price">$3.99</p>
+		</a>
+	</div>
+</body>
+</html>

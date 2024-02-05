@@ -7,7 +7,7 @@
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	height: 900px;
 
 }
@@ -21,9 +21,14 @@ p.price {
 
 .gallery-item {
 	display: flex;
-	margin: auto;
+	margin-top: 20px;
+	/* if use margin: auto here, will automatically center everything
+	so using margin-top can make sure that all of the top gallery-items 
+	are aligned */
 	flex-direction: column;
+	align-self: flex-start;
 }
+
 
 .gallery-item img {
 	width:  285px;
@@ -32,7 +37,8 @@ p.price {
 
 .gallery-item .name {
 	text-decoration: underline;
-	overflow-wrap: break-word;
+	width: 285px; 
+    text-align: left; 
 }
 
 p.name:hover {

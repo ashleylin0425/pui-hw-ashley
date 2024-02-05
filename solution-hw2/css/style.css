@@ -39,9 +39,7 @@ p, select, button {
 /* do i need to add media queries for the header */
 
 #logo {
-	display: flex;
-	flex-grow: 1;
-	width: 100px;
+	width: 400px;
 }
 
 hr {
@@ -53,9 +51,9 @@ hr {
 }
 .headeright {
 	display: flex;
-	flex-grow: 1.5;
 	flex-direction: column;
 	justify-content: space-between;
+	width: 80%;
 }
 
 .title {

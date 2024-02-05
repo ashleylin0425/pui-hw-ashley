@@ -17,13 +17,6 @@ p, select, button {
 }
 
 
-
-/* div#banner {
-	padding-top:  50px;
-	font-size:  25px;
-	text-align: center;
-} This used to be the "Our hand-made cinnamon roll*/
-
 .product-image {
 	border:  3px solid black;
 }
@@ -36,7 +29,6 @@ p, select, button {
 	gap: 20px;
 }
 
-/* do i need to add media queries for the header */
 
 #logo {
 	width: 400px;
@@ -103,8 +95,8 @@ define the oval and the position of the superscript with this  */
 .superscript::before {
 	content: '2';
 	position: absolute;
-	top: -0.5em; /* Adjust as needed */
-	left: 0.5em; /* Adjust as needed */
+	top: -0.5em; 
+	left: 0.5em; 
 	width: 1em;
 	height: 1.5em;
 	border-radius: 50%;
@@ -112,6 +104,6 @@ define the oval and the position of the superscript with this  */
 	color: white;
 	text-align: center;
 	line-height: 1.5em;
-	font-size: 0.8em; /* Adjust the font size */
+	font-size: 0.8em; 
 }
 

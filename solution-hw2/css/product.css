@@ -27,15 +27,25 @@ select {
 	justify-content: space-between;
 }
 
+#customize {
+	margin-top: 20px;
+}
+
+.pack {
+	margin-top: 40px;
+}
+
 #message {
 	display: flex;
 	padding-right: 80px;
 }
 
+
 #add-cart {
 	margin-top: 50px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	width: 294px;
 }
 
@@ -44,15 +54,14 @@ select {
 	padding: 10px;
 	text-align: center;
 	cursor: pointer;
+	width: 70px;
 }
 
-#add-cart span {
-	width: 150px;
-	padding: 10px;
-}
 
 #add-cart span.highlight {
 	border: 1px solid black;
-	width: 200px;
+	width: 150px;
+	display: flex;
+	justify-content: center; 
 }
 

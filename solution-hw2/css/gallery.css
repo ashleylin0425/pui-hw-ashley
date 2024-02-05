@@ -1,3 +1,20 @@
+.gallery-container {
+	padding-top:  60px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px; 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	height: 900px;
+
+}
+
+p.price {
+	margin-top: auto;
+}
 .gallery-item:hover {
 	background-color: yellow;
 }
@@ -15,6 +32,7 @@
 
 .gallery-item .name {
 	text-decoration: underline;
+	overflow-wrap: break-word;
 }
 
 p.name:hover {

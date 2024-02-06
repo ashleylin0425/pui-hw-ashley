@@ -7,19 +7,17 @@ a {
 	color:  black;
 }
 
-p, select, button {
+p, select {
 	font-size:  20px;
 }
 
+
+/* highlight both nav bar and add to cart and checkout */
 .highlight {
 	background-color: yellow;
 	font-weight: bold;
 }
 
-
-.product-image {
-	border:  3px solid black;
-}
 
 
 .header {
@@ -41,6 +39,7 @@ hr {
 	margin: auto;
 	display: flex;	
 }
+
 .headeright {
 	display: flex;
 	flex-direction: column;
@@ -63,23 +62,13 @@ hr {
 	display: flex;
 	margin-left: auto;
 	align-items: center;
-	flex-grow: 1;
 	gap: 20px;
 	
 }
 
-
 .navbar a {
-	display: flex;
-	text-align: center;
-	margin:  20px;
-}
-
-.navbar a {
-	font-size:  25px;
-	width:  100%;
-	text-align: right;
-	text-transform: uppercase;
+	margin: 20px;
+	font-size: 25px;
 }
 
 
@@ -87,12 +76,14 @@ hr {
 	position: relative;
 }
 
+/* Referred to a couple lines from stackoverflow to create this: https://stackoverflow.com/questions/501671/superscript-in-css-only */
+
 /* Span out the elements you want to make style edit, ensure that the super
 script elements moves relative to its normal position (in line), create a 
 pseudo element using ::before to create a virtual element wrap for the superscript
-define the oval and the position of the superscript with this  */
+define the oval and the position of the superscript with this */
 
-.superscript::before {
+.superscript:after {
 	content: '2';
 	position: absolute;
 	top: -0.5em; 

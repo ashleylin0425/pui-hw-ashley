@@ -12,35 +12,39 @@
 
 }
 
+/* move this closer to the center */
 p.price {
 	margin-top: auto;
 }
-.gallery-item:hover {
-	background-color: yellow;
-}
 
-.gallery-item {
+.gallery-roll {
 	display: flex;
 	margin-top: 20px;
 	/* if use margin: auto here, will automatically center everything
-	so using margin-top can make sure that all of the top gallery-items 
+	so using margin-top can make sure that all of the top gallery-rolls 
 	are aligned */
 	flex-direction: column;
 	align-self: flex-start;
 }
 
 
-.gallery-item img {
+.gallery-roll img {
 	width:  285px;
 	margin: auto;
+	border:  3px solid black;
 }
 
-.gallery-item .name {
+.gallery-roll .name {
 	text-decoration: underline;
 	width: 285px; 
-    text-align: left; 
 }
 
+
+/* hover features */
 p.name:hover {
 	font-weight: bold;
+}
+
+.gallery-roll:hover {
+	background-color: yellow;
 }

@@ -4,8 +4,6 @@
 
 
 
-
-
 const allGlazing = {
     "Keep original": 0.00,
     "Sugar milk": 0.00,
@@ -22,21 +20,21 @@ const allPack = {
 }
 
 
-let selectGlazing = document.querySelector("#glazingOptions")
+let selectedGlazing = document.querySelector("#glazingOptions")
 
 for (const [text, value] of Object.entries(allGlazing)) {
     let glazingItem = document.createElement("option")
     glazingItem.text = text
     glazingItem.value = value
-    selectGlazing.appendChild(glazingItem)}
+    selectedGlazing.appendChild(glazingItem)}
 
-let selectPack = document.querySelector("#packOptions")
+let selectedPack = document.querySelector("#packOptions")
 
 for (const [text,value] of Object.entries(allPack)) {
     let packItem = document.createElement("option")
     packItem.text = text
     packItem.value = value
-    selectPack.appendChild(packItem)}
+    selectedPack.appendChild(packItem)}
 
 
 function glazingChange(element) {
@@ -49,8 +47,9 @@ function packChange(element) {
 
 function updatePrice() {
     const basePrice = 2.49
-    const glazingPrice = parseFloat(selectGlazing.value);
-    const packPrice = parseInt(selectPack.value);
+    // need to convert the value to a integer/float, otherwise it's a string
+    const glazingPrice = parseFloat(selectedGlazing.value);
+    const packPrice = parseInt(selectedPack.value);
     const totalPrice = (basePrice + glazingPrice) * packPrice; 
     const finalPrice = totalPrice.toFixed (2);
     // rounded to two decimal places only

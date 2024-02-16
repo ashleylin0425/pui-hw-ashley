@@ -1,0 +1,50 @@
+.gallery-container {
+	padding-top:  60px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px; 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	height: 900px;
+
+}
+
+/* move this closer to the center */
+p.price {
+	margin-top: auto;
+}
+
+.gallery-roll {
+	display: flex;
+	margin-top: 20px;
+	/* if use margin: auto here, will automatically center everything
+	so using margin-top can make sure that all of the top gallery-rolls 
+	are aligned */
+	flex-direction: column;
+	align-self: flex-start;
+}
+
+
+.gallery-roll img {
+	width:  285px;
+	margin: auto;
+	border:  3px solid black;
+}
+
+.gallery-roll .name {
+	text-decoration: underline;
+	width: 285px; 
+}
+
+
+/* hover features */
+p.name:hover {
+	font-weight: bold;
+}
+
+.gallery-roll:hover {
+	background-color: yellow;
+}

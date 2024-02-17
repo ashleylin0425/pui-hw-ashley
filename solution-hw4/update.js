@@ -8,9 +8,9 @@ const chosenRoll = params.get("roll")
 let cart = []
 
 
-function updateRoll(rollType) {
-    const rollDetail = rolls[rollType];
-    const rollName = rollType;
+function updateRoll(roll) {
+    const rollDetail = rolls[roll];
+    const rollName = roll;
     const rollPrice = rollDetail.basePrice;
     const rollImagePath = rollDetail.imageFile;
 
@@ -25,18 +25,16 @@ updateRoll(chosenRoll)
 
 
 class Roll {
-    rollType;
-    rollGlazing;
-    packSize;
-    basePrice;
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
-        this.glazing = rollGlazing;
+        this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
-
     }
 }
+
+
+
 
 
 function getUserGlazing(sel) {
@@ -51,18 +49,19 @@ function getUserPack(sel) {
 
 function storeRollInCart() {
     const selectedRoll = chosenRoll;
-    console.log (chosenRoll);
     const selectedPrice = rolls[chosenRoll].basePrice;
-    console.log (selectedPrice);
     const selGlazing = document.querySelector("#glazingOptions");
     const selPack = document.querySelector("#packOptions");
     const userGlazing = getUserGlazing(selGlazing);
-    console.log(userGlazing);
     const userPack = getUserPack(selPack);
-    console.log(userPack)
-    let theRoll  = new Roll(selectedRoll, userGlazing, userPack, selectedPrice)
-    cart.push(theRoll)
-    console.log(cart)   
+    console.log (selectedRoll);
+    console.log (selectedPrice);
+    console.log(userGlazing);
+    console.log(userPack);
+
+    let theRoll  = new Roll(selectedRoll, userGlazing, userPack, selectedPrice);
+    cart.push(theRoll);
+    console.log(cart);
 }
 
 

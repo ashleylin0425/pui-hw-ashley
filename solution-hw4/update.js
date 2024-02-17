@@ -54,10 +54,6 @@ function storeRollInCart() {
     const selPack = document.querySelector("#packOptions");
     const userGlazing = getUserGlazing(selGlazing);
     const userPack = getUserPack(selPack);
-    console.log (selectedRoll);
-    console.log (selectedPrice);
-    console.log(userGlazing);
-    console.log(userPack);
 
     let theRoll  = new Roll(selectedRoll, userGlazing, userPack, selectedPrice);
     cart.push(theRoll);

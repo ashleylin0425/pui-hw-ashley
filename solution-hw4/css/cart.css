@@ -25,7 +25,7 @@
 	border: 3px solid black;
 }
 
-p.remove {
+button.remove {
 	text-decoration: underline;
 	font-weight:  bold;
 }

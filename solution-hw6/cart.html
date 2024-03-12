@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/cart.css" type="text/css" />
+	<title>Cart</title>
+	<script defer src="rollsData.js"></script>
+	<script defer src="selector.js"></script>
+	<script defer src="cart.js"></script>
+	<script defer src="update.js"></script>
+
+
+
+
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" id="logo"><img src="images/logo/logo-01.svg" alt="logo"></a>
+		<div class="headeright">
+			<div class="navbar">
+				<a id="product" href="index.html"><span>PRODUCTS</span></a>
+				<a id="cart" href="cart.html"><span class="highlight">CART</span><span class="superscript"></span></a>
+			</div>
+			<hr>
+			<p class="title"> Shopping Cart </p>	
+		</div>		
+	</div>
+
+	<div class="cart-container">
+		<div class="item-list">
+
+			<template id="item-template">
+				<div class="item">
+					<div class="left">
+						<div class = "imageURL" >
+							<img src="images/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
+						</div>
+						<button class="remove">Remove</button>
+						<!-- change css here -->
+					</div>
+					<div class="middle">
+						<div class="item-title">
+							<p>Original Cinnamon Roll</p>
+						</div>
+
+						<div class="item-glazing">
+							<p>Keep original</p>
+						</div>
+
+						<div class="item-pack">
+							<p>Pack Size: 1</p>
+						</div>
+					</div>
+					<div class="right">
+						<p>$ 2.49</p>
+					</div>
+				</div>
+			</template>
+
+			
+		</div>
+	
+		<div class="total">
+			<div class="total-left">
+				<p>Total </p>
+			</div>
+			<div class="total-right">
+				<p>$ 29.94</p>
+			</div>
+		</div>
+
+		<div class="checkout">
+			<span class="highlight">Checkout</span>
+		</div>
+
+	</div>	
+</body>
+</html>
+

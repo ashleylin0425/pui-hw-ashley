@@ -1,0 +1,82 @@
+.cart-container{
+	padding-top: 80px;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: 100px;
+	width: 700px;
+
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	width: 700px;
+	margin-bottom: 20px;
+}
+
+.cart-container img {
+	width: 200px;
+	border: 3px solid black;
+}
+
+button.remove {
+	text-decoration: underline;
+	font-weight:  bold;
+	background-color: transparent; /* Transparent background */
+	border: none; /* No border */
+	padding: 0; /* Remove padding */
+	cursor: pointer; /* Cursor on hover */
+	font-size: 20px;
+	font-family: Verdana;
+	margin-top: 10px;
+	}
+	
+
+.middle {
+	padding-top: 20px;
+	margin-left: 30px;
+}
+.right {
+	margin-left: auto;
+	margin-top: 65px;
+	font-size: 20px;
+}
+
+
+.total {
+	border-top: 5px solid black;
+	display: flex;
+	align-items: center;
+}
+
+.total-left{
+	margin-left: 230px;
+}
+
+.total-right{
+	margin-left: auto;
+}
+
+.checkout span.highlight {
+	border: 2px solid black;
+	width: 100px;
+	display: flex;
+	justify-content: center; 
+	padding: 20px;
+	margin-left: auto;
+	font-size: 18px;
+}
+
+
+.item-title,
+.item-glazing,
+.item-pack {
+    padding-bottom: 20px; 
+	font-size: 20px;
+}
+
+.item-glazing p {
+	font-weight: bold;
+}
+/* why is this not doing anything? */

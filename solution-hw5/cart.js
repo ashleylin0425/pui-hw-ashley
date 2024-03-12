@@ -29,7 +29,6 @@ class Roll {
     }
 }
 
-console.log(cartItemArray)
 const Original = new Roll("Original", "Sugar Milk", 1, parseFloat(rolls["Original"].basePrice));
 const Walnut = new Roll("Walnut", "Vanilla Milk", 12, parseFloat(rolls["Walnut"].basePrice));
 const Raisin = new Roll("Raisin", "Sugar Milk", 3, parseFloat(rolls["Raisin"].basePrice ));
@@ -67,8 +66,7 @@ function createElement(roll) {
     
     const rollListElement = document.querySelector(".item-list");
     rollListElement.prepend(roll.element);
-    // what is this 
-    
+
     updateElement(roll);
   }
   
@@ -97,11 +95,12 @@ function removeItem(roll) {
         cartItemArray.splice(index, 1);
     }
     updateTotalPrice()
+
   }
   
  
 
-  function updateTotalPrice() {
+function updateTotalPrice() {
     const totalPriceElement = document.querySelector(".total-right p");
     let totalPrice = 0;
     for (const roll of cartItemArray) {

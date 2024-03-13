@@ -5,9 +5,9 @@ const params = new URLSearchParams(queryString)
 const chosenRoll = params.get("roll")
 
 
-let cart = []
-import { appendToCart } from './cart.js';
+console.log(chosenRoll)
 
+let cartItems = []
 
 function updateRoll(roll) {
     const rollDetail = rolls[roll];
@@ -58,7 +58,7 @@ function storeRollInCart() {
     const userPack = getUserPack(selPack);
 
     let theRoll  = new Roll(selectedRoll, userGlazing, userPack, selectedPrice);
-    cart.push(theRoll);
+    cartItems.push(theRoll);
     saveToLocalStorage();
 
 }
@@ -66,27 +66,50 @@ function storeRollInCart() {
 // above is hw4
 
 
-// function saveToLocalStorage() {
-//   console.log("Hi");
-//   const cartArrayString = JSON.stringify(cart);
-//   console.log(cartArrayString);
+function saveToLocalStorage() {
+  const cartArrayString = JSON.stringify(cartItems);
+  console.log(cartArrayString);
+  localStorage.setItem('storedItems', cartArrayString);
 
-//   localStorage.setItem('storedItems', cartArrayString);
-// }
+}
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem("storedItems");
+    const cartArray = JSON.parse(cartArrayString);
+    cartItems = cartArray; 
+    console.log("Hi")
+}
 
-// function retrieveFromLocalStorage() {
-//   const cartArrayString = localStorage.getItem('storedItems');
-//   const cartArray = JSON.parse(cartArrayString);
-//   appendToCart(cartArray); 
-//   // used the function from cart js, can I do that??
-//   // for (const roll of cartItemArray) {
-//   //   createElement (roll);
-// }     
-  
-// console.log(localStorage)
+if (localStorage.getItem("storedItems") != null) {
+    retrieveFromLocalStorage();
+  }
 
 
-// if (localStorage.getItem('storedItems') != null) {
-//   retrieveFromLocalStorage();
-// }
 
+
+
+
+
+
+
+function checkLocalStorage() {
+  const storedItemsString = localStorage.getItem('storedItems');
+  if (storedItemsString) {
+    const storedItems = JSON.parse(storedItemsString);
+    console.log('localStorage contains:', storedItems);
+  } else {
+    console.log('localStorage is empty.');
+  }
+}
+
+
+
+checkLocalStorage()
+
+
+
+// don't know if the localstorage is working, because if exit to the gallery
+// localstorage is lost 
+
+// why calculated price undefined
+
+// also once removed, go back to product page, still need to 

@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link rel="stylesheet" href="css/product.css" type="text/css" />
-	<script defer src="selector.js"></script>
-	<script defer src="update.js" type="module"></script>
 	<script src="rollsData.js"></script>
-	
+	<script defer src="update.js"></script>
+	<script defer src="selector.js"></script>
+	<script defer src="badge.js"></script>
 	<title>Product Details</title>
 </head>
 <body>
@@ -62,7 +62,7 @@
 			<div class="add-cart">
 				<span class="price">$2.49</span>
 				<a class="cart">
-					<button class="highlight" onclick="storeRollInCart()">Add to Cart</button>
+					<button class="highlight" onclick= "storeRollInCart(); updateCartCount()">Add to Cart</button>
 				</a>
 			</div>
 		</div>

@@ -58,15 +58,7 @@ button.remove {
 	margin-left: auto;
 }
 
-.checkout span.highlight {
-	border: 2px solid black;
-	width: 100px;
-	display: flex;
-	justify-content: center; 
-	padding: 20px;
-	margin-left: auto;
-	font-size: 18px;
-}
+
 
 
 .item-title,
@@ -80,3 +72,17 @@ button.remove {
 	font-weight: bold;
 }
 /* why is this not doing anything? */
+
+
+.checkout {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.checkout button {
+    background-color: yellow;
+    padding: 20px 30px; /* Adjust padding as needed */
+    border: 1.5px solid black;
+    font-size: 20px;
+    cursor: pointer;
+}

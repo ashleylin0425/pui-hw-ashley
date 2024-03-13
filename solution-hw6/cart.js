@@ -1,11 +1,10 @@
-// const cartItemSet = new Set ()
 const cartItemArray = []
 
 const allGlazingInfo = {
-    "Original": 0.00,
-    "Sugar Milk": 0.00,
-    "Vanilla Milk": 0.50,
-    "Double Chocolate": 1.50
+    "Keep original": 0.00,
+    "Sugar milk": 0.00,
+    "Vanilla milk": 0.50,
+    "Double chocolate": 1.50
 
 }
 
@@ -17,35 +16,31 @@ const allPackInfo = {
 }
 
 
+
 class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-        let rawPrice = (basePrice + parseFloat(allGlazingInfo[rollGlazing])) * parseFloat(allPackInfo[packSize]);
-        this.calculatedPrice = rawPrice.toFixed(2);
-        this.element = null;
-    }
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+      this.type = rollType;
+      this.glazing = rollGlazing;
+      this.size = packSize;
+      this.basePrice = basePrice;
+
+      let rawPrice = (basePrice + parseFloat(allGlazingInfo[rollGlazing])) * parseFloat(allPackInfo[packSize]);
+      this.calculatedPrice = rawPrice.toFixed(2);
+      console.log("Calculated Price:", this.calculatedPrice);
+
+      this.element = null;
+  }
 }
 
-// const Original = new Roll("Original", "Sugar Milk", 1, parseFloat(rolls["Original"].basePrice));
-// const Walnut = new Roll("Walnut", "Vanilla Milk", 12, parseFloat(rolls["Walnut"].basePrice));
-// const Raisin = new Roll("Raisin", "Sugar Milk", 3, parseFloat(rolls["Raisin"].basePrice ));
-// const Apple = new Roll("Apple", "Original", 3, parseFloat(rolls["Apple"].basePrice));
-
-// const rollsArray = [Original, Walnut, Raisin, Apple]
 
 
-
-export function appendToCart(rollsArray) {
+function appendToCart(rollsArray) {
     for (let i=0; i < rollsArray.length; i++) {
         cartItemArray.push(rollsArray[i]);
     }
+    
 }
 
-
-// appendToCart(rollsArray)
 
 
 
@@ -60,6 +55,7 @@ function createElement(roll) {
     const btnRemove = roll.element.querySelector("button.remove");
     btnRemove.addEventListener('click', () => {
       removeItem(roll);
+      updateCartCount();
     });
     
     const rollListElement = document.querySelector(".item-list");
@@ -81,9 +77,10 @@ function updateElement(roll) {
     rollGlazingElement.innerText = roll.glazing;
     rollPackElement.innerText = "Pack size: " + roll.size;
     rollPriceElement.innerText = "$ " + roll.calculatedPrice;
+
+
   }
   
-updateTotalPrice()
 
 
 function removeItem(roll) {
@@ -92,7 +89,12 @@ function removeItem(roll) {
     if (index !== -1) {
         cartItemArray.splice(index, 1);
     }
-    updateTotalPrice()
+    updateTotalPrice();
+
+    const cartArrayString = JSON.stringify(cartItemArray);
+    localStorage.setItem('storedItems', cartArrayString);
+    
+    console.log("Cart in local storage after removing item:", cartArrayString);
 
   }
   
@@ -107,3 +109,32 @@ function updateTotalPrice() {
     } 
     totalPriceElement.innerText = "$ " + totalPrice.toFixed(2);
 }
+
+
+
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedItems');
+    const cartArray = JSON.parse(cartArrayString);
+    if (!cartArray) { 
+      cartArray = []; 
+     }
+
+    //  key functionality! remember to call on class Roll here, loop thru array to create element on DOM
+    for (const item of cartArray) {
+      const roll = new Roll(item.type, item.glazing, item.size, item.basePrice);
+      cartItemArray.push(roll);
+  }
+    for (const roll of cartItemArray) {
+        createElement(roll);
+}
+}
+    
+
+if (localStorage.getItem('storedItems') != null) {
+    retrieveFromLocalStorage();
+  }
+  
+
+
+updateTotalPrice()
+

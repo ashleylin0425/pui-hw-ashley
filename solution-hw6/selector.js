@@ -4,10 +4,6 @@
 
 
 
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString)
-const chosenRoll = params.get("roll")
-
 const allGlazing = {
     "Keep original": 0.00,
     "Sugar milk": 0.00,
